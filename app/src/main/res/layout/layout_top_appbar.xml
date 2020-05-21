@@ -1,0 +1,216 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp"
+            android:id="@+id/appBarLayout">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:contentInsetLeft="0dp"
+                android:contentInsetStart="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetEnd="0dp"
+                android:id="@+id/toolbar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/toolbar_button_style"
+                        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                        android:id="@+id/btnback">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_back"
+                            />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_toRightOf="@+id/btnback"
+                        android:id="@+id/tvToolbarTitle"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/toolbar_button_style"
+                        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                        android:visibility="gone"
+                        android:id="@+id/btnSave">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorSecondary"
+                            android:layout_marginEnd="16dp"
+                            android:text="Save"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/toolbar_button_style"
+                        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                        android:visibility="gone"
+                        android:id="@+id/btnPublish">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorSecondary"
+                            android:layout_marginEnd="16dp"
+                            android:text="Publish"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/toolbar_button_style"
+                        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                        android:visibility="gone"
+                        android:id="@+id/btnAdd">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_add" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/toolbar_button_style"
+                            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                            android:visibility="gone"
+                            android:layout_toLeftOf="@+id/btnRequest"
+                            android:id="@+id/btnDiscussion">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:padding="2dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/ic_discussion"
+                                android:tint="@color/colorLightGrey"
+                                android:id="@+id/ivDiscussion"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/toolbar_button_style"
+                            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                            android:visibility="gone"
+                            android:id="@+id/btnRequest">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_request"
+                                android:id="@+id/ivRequest"/>
+                            <TextView
+                                android:id="@+id/tvRequestCount"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_alignRight="@id/ivRequest"
+                                android:layout_alignTop="@+id/ivRequest"
+                                android:background="@drawable/red_background_with_border"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="8sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/toolbar_button_style"
+                        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                        android:visibility="gone"
+                        android:id="@+id/btnEmergencyContact">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_rate"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/toolbar_button_style"
+                        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                        android:visibility="gone"
+                        android:layout_toLeftOf="@+id/btnEmergencyContact"
+                        android:id="@+id/btnReview">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_contact"
+                            android:tint="@color/colorWhite"
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+    </RelativeLayout>
+
+
+
+</merge>

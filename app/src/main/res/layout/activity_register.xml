@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:fitsSystemWindows="true"
+                app:elevation="0dp"
+                android:id="@+id/appBarLayout">
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:contentInsetLeft="0dp"
+                    android:contentInsetStart="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    android:contentInsetRight="0dp"
+                    android:contentInsetEnd="0dp"
+                    android:id="@+id/toolbar">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/toolbar_button_style"
+                            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                            android:id="@+id/btnback">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_back"
+                                />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_toRightOf="@+id/btnback"
+                            android:id="@+id/tvToolbarTitle"/>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_person"
+                        android:layout_gravity="center_vertical"
+                        android:padding="8dp"
+                        android:tint="@color/colorWhiteWithHighTransparency"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorWhiteWithHighTransparency"
+                            android:textColorHint="@color/colorWhiteWithHighTransparency"
+                            android:background="@null"
+                            android:hint="Nickname show in RideS profile"
+                            android:inputType="textEmailAddress"
+                            android:padding="16dp"
+                            android:id="@+id/etProfileName"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@color/colorWhiteWithHighTransparency" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cannot be empty"
+                    android:layout_marginStart="56dp"
+                    android:textColor="@color/colorRed"
+                    android:visibility="gone"
+                    android:id="@+id/warningMsgProfileName"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_phone"
+                        android:tint="@color/colorWhiteWithHighTransparency"
+                        android:layout_gravity="center_vertical"
+                        android:padding="8dp"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.hbb20.CountryCodePicker
+                                android:id="@+id/ccp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:ccp_defaultNameCode="MY"
+                                app:ccp_showNameCode="false"
+                                app:ccp_contentColor="@color/colorWhiteWithHighTransparency"
+                                android:layout_marginTop="8dp"
+                                android:paddingLeft="16dp"
+                                />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:singleLine="true"
+                                android:background="@null"
+                                android:textColor="@color/colorWhiteWithHighTransparency"
+                                android:textColorHint="@color/colorWhiteWithHighTransparency"
+                                android:hint="128889999"
+                                android:inputType="phone"
+                                android:padding="16dp"
+                                android:id="@+id/etPhone"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@color/colorWhiteWithHighTransparency" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cannot be empty"
+                    android:layout_marginStart="56dp"
+                    android:textColor="@color/colorRed"
+                    android:visibility="gone"
+                    android:id="@+id/warningMsgPhoneNo"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_message"
+                        android:layout_gravity="center_vertical"
+                        android:padding="8dp"
+                        android:tint="@color/colorWhiteWithHighTransparency"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:singleLine="true"
+                            android:background="@null"
+                            android:textColor="@color/colorWhiteWithHighTransparency"
+                            android:textColorHint="@color/colorWhiteWithHighTransparency"
+                            android:hint="Email address"
+                            android:inputType="textEmailAddress"
+                            android:padding="16dp"
+                            android:id="@+id/etEmail"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@color/colorWhiteWithHighTransparency" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cannot be empty"
+                    android:layout_marginStart="56dp"
+                    android:textColor="@color/colorRed"
+                    android:visibility="gone"
+                    android:id="@+id/warningMsgEmail"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_password"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorWhiteWithHighTransparency"
+                        android:padding="8dp"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:singleLine="true"
+                            android:background="@null"
+                            android:hint="Password"
+                            android:textColor="@color/colorWhiteWithHighTransparency"
+                            android:textColorHint="@color/colorWhiteWithHighTransparency"
+                            android:inputType="textPassword"
+                            android:padding="16dp"
+                            android:id="@+id/etPassword"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@color/colorWhiteWithHighTransparency" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cannot be empty"
+                    android:layout_marginStart="56dp"
+                    android:textColor="@color/colorRed"
+                    android:visibility="gone"
+                    android:id="@+id/warningMsgPassword"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_confirm_password"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorWhiteWithHighTransparency"
+                        android:padding="4dp"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:singleLine="true"
+                            android:background="@null"
+                            android:hint="Confirm password"
+                            android:textColor="@color/colorWhiteWithHighTransparency"
+                            android:textColorHint="@color/colorWhiteWithHighTransparency"
+                            android:inputType="textPassword"
+                            android:padding="16dp"
+                            android:id="@+id/etConPassword"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@color/colorWhiteWithHighTransparency" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cannot be empty"
+                    android:layout_marginStart="56dp"
+                    android:textColor="@color/colorRed"
+                    android:visibility="gone"
+                    android:id="@+id/warningMsgConPassword"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_gender"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorWhiteWithHighTransparency"
+                        android:padding="8dp"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:padding="16dp"
+                            android:id="@+id/radioGrpGender">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:textSize="16sp"
+                                android:buttonTint="@color/colorWhiteWithHighTransparency"
+                                android:textColor="@color/colorWhiteWithHighTransparency"
+                                android:text="Male"
+                                android:id="@+id/radioMale"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:buttonTint="@color/colorWhiteWithHighTransparency"
+                                android:textColor="@color/colorWhiteWithHighTransparency"
+                                android:text="Female"
+                                android:id="@+id/radioFemale"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@color/colorWhiteWithHighTransparency" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please select"
+                    android:layout_marginStart="56dp"
+                    android:textColor="@color/colorRed"
+                    android:visibility="gone"
+                    android:id="@+id/warningMsgGender"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete registration"
+                android:background="@drawable/button_secondary_color_round"
+                android:layout_above="@+id/tvRegister"
+                android:textSize="16sp"
+                android:layout_margin="16dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/btnRegister"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:id="@+id/progressBar"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

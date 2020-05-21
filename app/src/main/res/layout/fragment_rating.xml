@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGreenGrey"
+    android:id="@+id/rlRating">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/transparent_toolbar"
+            android:id="@+id/rlRatingTop">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textColor="@color/colorWhiteWithTransparency"
+                android:layout_marginLeft="24dp"
+                android:text="Please rate"
+
+                android:id="@+id/tvPleaseRate"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Are you happy with Andy"
+                android:textColor="@color/colorWhiteWithTransparency"
+                android:layout_marginLeft="24dp"
+                android:textSize="16dp"
+                android:layout_below="@+id/tvPleaseRate"
+                android:id="@+id/tvRatingCaption"/>
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_male"
+                android:background="@drawable/grey_border"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/ivProfileImg"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlRatingTop"
+            android:layout_above="@id/rlCardTop"
+            android:layout_marginTop="16dp"
+            android:id="@+id/rlFace">
+
+            <com.yugansh.tyagi.smileyrating.SmileyRatingView
+                app:face_color="@color/colorTransparent"
+                android:id="@+id/smiley_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:default_rating="1"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCardTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlCardBottom">
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="8dp"
+                android:background="@color/colorBlackWithHighTransparency"
+                app:srb_borderColor="@color/colorWhiteWithTransparency"
+                app:srb_fillColor="@color/colorWhite"
+                app:srb_numberOfStars="5"
+                app:srb_starSize="36dp"
+                app:srb_stepSize="1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:paddingBottom="32dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/rlCardBottom">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/containerEtReview">
+
+                <EditText
+                    android:id="@+id/etReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16dp"
+                    android:background="@color/colorBlackWithHighTransparency"
+                    android:textColor="@color/colorWhiteWithTransparency"
+                    android:hint="Enter your review"
+                    android:maxLines="3"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@+id/containerEtReview"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorWhiteWithTransparency"
+                android:text="Submit"
+                android:id="@+id/btnSubmit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                android:layout_below="@id/btnSubmit"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorGrey"
+                android:textSize="16dp"
+                android:id="@+id/tvSkip"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

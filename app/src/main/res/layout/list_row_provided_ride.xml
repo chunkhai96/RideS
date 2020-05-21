@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/tvProvidedRideTitle"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDefaultText"
+                android:text="From: "
+                android:id="@+id/tvFromCaption"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDefaultText"
+                android:layout_toRightOf="@+id/tvFromCaption"
+                android:id="@+id/tvProvidedRideFrom"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDefaultText"
+                android:text="To: "
+                android:layout_below="@+id/tvProvidedRideFrom"
+                android:id="@+id/tvToCaption"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDefaultText"
+                android:layout_below="@id/tvProvidedRideFrom"
+                android:layout_toRightOf="@+id/tvToCaption"
+                android:layout_alignLeft="@+id/tvProvidedRideFrom"
+                android:id="@+id/tvProvidedRideTo"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

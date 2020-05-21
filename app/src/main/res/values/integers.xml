@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="providedride_status_open">1</integer>
+    <integer name="providedride_status_cancel">2</integer>
+    <integer name="providedride_status_complete">5</integer>
+
+    <integer name="sharedride_status_requested">1</integer>
+    <integer name="sharedride_status_cancel">2</integer>
+    <integer name="sharedride_status_accept">3</integer>
+    <integer name="sharedride_status_decline">4</integer>
+    <integer name="sharedride_status_complete">5</integer>
+
+    <integer name="notification_status_new">0</integer>
+    <integer name="notification_status_archived">1</integer>
+
+    <integer name="notification_type_newRideRequest">1</integer>
+    <integer name="notification_type_cancelRide">2</integer>
+    <integer name="notification_type_cancelRequest">3</integer>
+    <integer name="notification_type_acceptRequest">4</integer>
+    <integer name="notification_type_declineRequest">5</integer>
+
+    <integer name="user_verification_status_new">1</integer>
+    <integer name="user_verification_status_verified">2</integer>
+    <integer name="user_verification_status_unverified">3</integer>
+</resources>

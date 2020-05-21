@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    tools:context=".RideDetailActivity">
+
+    <fragment
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="280dp"
+        android:id="@+id/map"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <View
+                android:id="@+id/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="@drawable/top_shadow"
+                app:layout_anchor="@id/nestedScrollView" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightGreenGrey"
+                app:behavior_peekHeight="280dp"
+                app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/colorWhite"
+                            android:layout_gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_minus"
+                                android:layout_gravity="center_horizontal"
+                                android:id="@+id/ivMinus"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="16dp">
+
+                                <RelativeLayout
+                                    android:id="@+id/rlCardTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="72dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toLeftOf="@+id/linLayoutRideStatus"
+                                        android:layout_centerVertical="true">
+
+                                        <TextView
+                                            android:id="@+id/tvDateTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/colorBlack"
+                                            android:focusable="true"
+                                            android:focusableInTouchMode="true"
+                                            android:textSize="24dp" />
+
+                                        <TextView
+                                            android:id="@+id/tvDepartureDateTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvDateTitle" />
+
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:orientation="horizontal"
+                                        android:layout_centerVertical="true"
+                                        android:id="@+id/linLayoutRideStatus">
+
+                                        <ImageView
+                                            android:id="@+id/ivDone"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentTop="true"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@null"
+                                            android:layout_margin="4dp"
+                                            android:src="@drawable/ic_true"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:id="@+id/ivSteering"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@null"
+                                            android:layout_margin="4dp"
+                                            android:src="@mipmap/ic_steering_no_background"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:id="@+id/ivPassenger"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@null"
+                                            android:layout_margin="4dp"
+                                            android:src="@mipmap/ic_colorful_passenger"
+                                            android:visibility="gone" />
+
+                                        <RelativeLayout
+                                            android:id="@+id/rlCancelled"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@android:drawable/editbox_background"
+                                            android:backgroundTint="@color/colorRed"
+                                            android:layout_margin="4dp"
+                                            android:padding="4dp"
+                                            android:visibility="gone">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@android:drawable/editbox_background"
+                                                android:text="RIDE CANCELLED"
+                                                android:textColor="@color/colorRed"
+                                                android:textSize="10dp"
+                                                android:textStyle="bold" />
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:background="@color/colorDivider" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rlCardTitle"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="8dp">
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="24dp"
+                                        android:layout_marginTop="24dp"
+                                        android:layout_marginLeft="11dp"
+                                        android:background="@color/colorGrey"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_toLeftOf="@+id/rlPrice"
+                                        android:orientation="vertical">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:id="@+id/ic_from"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_circle_outline"
+                                                android:tint="@color/colorSecondaryDark"/>
+
+                                            <TextView
+                                                android:id="@+id/tvFromTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_toRightOf="@id/ic_from"
+                                                android:singleLine="true"
+                                                android:textColor="@color/colorBlack"
+                                                android:textSize="16sp"
+                                                android:ellipsize="marquee"
+                                                android:marqueeRepeatLimit ="1"
+                                                android:focusable="true"
+                                                android:focusableInTouchMode="true"
+                                                android:scrollHorizontally="true"/>
+
+                                            <TextView
+                                                android:id="@+id/tvFromCaption"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvFromTitle"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_toRightOf="@id/ic_from"
+                                                android:singleLine="true"
+                                                android:ellipsize="marquee"
+                                                android:marqueeRepeatLimit ="1"
+                                                android:focusable="true"
+                                                android:focusableInTouchMode="true"
+                                                android:scrollHorizontally="true"/>
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp">
+
+                                            <ImageView
+                                                android:id="@+id/ic_to"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_map_marker"
+                                                android:tint="@color/colorSecondaryDark"/>
+
+                                            <TextView
+                                                android:id="@+id/tvToTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_toRightOf="@id/ic_to"
+                                                android:textColor="@color/colorBlack"
+                                                android:textSize="16sp"
+                                                android:singleLine="true"
+                                                android:ellipsize="marquee"
+                                                android:marqueeRepeatLimit ="1"
+                                                android:focusable="true"
+                                                android:focusableInTouchMode="true"
+                                                android:scrollHorizontally="true"/>
+
+                                            <TextView
+                                                android:id="@+id/tvToCaption"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvToTitle"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_toRightOf="@id/ic_to"
+                                                android:singleLine="true"
+                                                android:ellipsize="marquee"
+                                                android:marqueeRepeatLimit ="1"
+                                                android:focusable="true"
+                                                android:focusableInTouchMode="true"
+                                                android:scrollHorizontally="true"/>
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlPrice"
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp">
+
+                                        <TextView
+                                            android:id="@+id/tvRm"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="RM" />
+
+                                        <TextView
+                                            android:id="@+id/tvShareRm"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tvRm"
+                                            android:textColor="@color/colorOrange"
+                                            android:textSize="48dp" />
+
+                                        <TextView
+                                            android:id="@+id/tvShareSen"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignBottom="@+id/tvShareRm"
+                                            android:layout_toRightOf="@+id/tvShareRm"
+                                            android:layout_marginBottom="8dp"
+                                            android:textColor="@color/colorOrange" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:textSize="16dp"
+                                android:textColor="@color/colorBlack"
+                                android:text="Vehicle"
+                                android:textStyle="bold"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="194dp"
+                                    android:id="@+id/ivVehicleImage"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/ivVehicleImage"
+                                    android:background="@drawable/transparent_to_black_background">
+
+                                    <TextView
+                                        android:id="@+id/tvVehiclePlateNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="16dp"
+                                        android:textSize="24sp"
+                                        android:textColor="@color/colorWhite"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_below="@+id/ivVehicleImage"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="24dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvVehicleInfo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="16dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/linLayoutProvider">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:textSize="16dp"
+                                android:text="Provider"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_toLeftOf="@+id/ivProviderProfileImage"
+                                        android:orientation="vertical">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/tvProviderName"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_toLeftOf="@id/relLayoutGenderIcon"
+                                                android:textSize="24sp" />
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:layout_below="@+id/tvProviderName"
+                                                android:background="@color/colorDivider" />
+
+                                            <RelativeLayout
+                                                android:id="@+id/relLayoutGenderIcon"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_centerVertical="true">
+
+                                                <ImageView
+                                                    android:id="@+id/ivMale"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:src="@drawable/ic_male"
+                                                    android:visibility="gone" />
+
+                                                <ImageView
+                                                    android:id="@+id/ivFemale"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:src="@drawable/ic_female"
+                                                    android:visibility="gone" />
+                                            </RelativeLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvProviderMatrixNo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:drawableLeft="@drawable/ic_matrix" />
+
+                                        <TextView
+                                            android:id="@+id/tvProviderPhoneNo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:drawableLeft="@drawable/ic_phone_outline" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:id="@+id/ivProviderProfileImage"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/btnViewProfile"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:text="View Profile"
+                                android:textColor="@color/colorSecondaryDark" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorWhite"
+                            android:layout_marginTop="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/colorBlack"
+                                    android:text="Carpooler"
+                                    android:textStyle="bold"/>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp">
+
+                                    <HorizontalScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clipToPadding="true"
+                                        android:paddingRight="16dp"
+                                        android:paddingLeft="16dp"
+                                        android:scrollbars="none">
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recycler_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="16dp" />
+
+                                    </HorizontalScrollView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        android:text="Empty carpooler"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="24dp"
+                                        android:id="@+id/tvEmptyCarpooler"/>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_above="@+id/relLayout2"
+            android:background="@drawable/top_shadow" />
+
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite">
+
+            <Button
+                android:id="@+id/btnJoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/colorSecondary"
+                android:text="JOIN RIDE"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnCancelRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/colorGrey"
+                android:text="CANCEL REQUEST"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnCancelRide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/colorGrey"
+                android:text="CANCEL RIDE"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/design_default_color_primary"
+                android:text="COMPLETE RIDE"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/relLayout1">
+
+        <include layout="@layout/layout_top_appbar"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cdflynn.android.library.checkview.CheckView
+            android:id="@+id/checkAnimation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:checkView_strokeColor="@color/green"
+            app:checkView_strokeWidth="4dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

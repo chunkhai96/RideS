@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddVehicleActivity"
+    android:background="@color/colorLightGreenGrey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1">
+
+        <include layout="@layout/layout_top_appbar"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:orientation="vertical"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Plate Number"
+                        android:layout_marginStart="2dp"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Eg: JLM3456"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:id="@+id/etPlateNo"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cannot be empty"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/colorRed"
+                        android:visibility="gone"
+                        android:id="@+id/warningMsgPlateNo"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Model"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="2dp"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Eg: Produa Myvi"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:id="@+id/etModel"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cannot be empty"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/colorRed"
+                        android:visibility="gone"
+                        android:id="@+id/warningMsgModel"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Color"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="2dp"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Eg: Silver"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:id="@+id/etColor"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cannot be empty"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/colorRed"
+                        android:visibility="gone"
+                        android:id="@+id/warningMsgColor"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Capacity"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="2dp"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Number of passenger (Exclude driver)"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:id="@+id/etCapacity"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cannot be empty"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/colorRed"
+                        android:visibility="gone"
+                        android:id="@+id/warningMsgCapacity"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/grey_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload vehicle photo"
+                            android:textSize="18dp"
+                            android:layout_centerInParent="true"
+                            android:drawableLeft="@drawable/ic_camera"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="176dp"
+                            android:layout_margin="16dp"
+                            android:id="@+id/ivVehicleImage"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivVehicleImage"
+                            android:layout_centerHorizontal="true"
+                            android:text="Please upload a photo"
+                            android:visibility="gone"
+                            android:textColor="@color/colorRed"
+                            android:id="@+id/warningMsgImage"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relLayout">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:id="@+id/progressBar" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

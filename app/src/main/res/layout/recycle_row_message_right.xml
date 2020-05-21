@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:id="@+id/tvDate"/>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvDate">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/img_default_profile_pic"
+            android:visibility="gone"
+            android:id="@+id/ivUserProfileImg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:visibility="gone"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tvUserName"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/tvUserName"
+            android:layout_alignParentRight="true">
+
+
+
+            <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/arrow"
+                android:background="@drawable/background_message_right">
+
+                <TextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="Message"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="left|center_vertical" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:text="16.30"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_gravity="bottom|right"
+                    android:paddingBottom="4dp"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tvMessage"
+                    android:layout_alignRight="@+id/tvMessage"
+                    android:layout_alignEnd="@+id/tvMessage" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/message_arrow_right"
+                android:layout_alignParentRight="true"
+                android:id="@+id/arrow"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

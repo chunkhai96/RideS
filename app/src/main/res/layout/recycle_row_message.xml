@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:src="@mipmap/img_default_profile_pic"
+        android:id="@+id/ivMessageImg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivMessageImg"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alex" 
+            android:textSize="16dp"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/tvMessageName"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20:10"
+            android:textSize="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/tvMessageName"
+            android:textColor="@color/colorBlack"
+            android:layout_marginRight="16dp"
+            android:id="@+id/tvMessageTime"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Hello, I am Alex. I want to ask you something, are you available?"
+            android:layout_below="@+id/tvMessageName"
+            android:layout_marginRight="16dp"
+            android:id="@+id/tvMessageCaption"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

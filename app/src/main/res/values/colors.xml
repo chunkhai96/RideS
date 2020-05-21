@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37464f</color>
+    <color name="colorPrimaryDark">#101f27</color>
+    <color name="colorPrimaryLight">#62727b</color>
+    <color name="colorSecondary">#00c853</color>
+    <color name="colorSecondaryDark">#009624</color>
+    <color name="colorSecondaryLight">#5efc82</color>
+    <color name="colorAccent">#009624</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrey">#bdbdbd</color>
+    <color name="colorLightGrey">#EEEEEE</color>
+    <color name="colorLightGreenGrey">#eaeded</color>
+    <color name="colorDefaultText">#808080</color>
+    <color name="colorRed">#f44336</color>#d50000
+    <color name="colorDarkRed">#d50000</color>
+    <color name="colorGreyWithTransparency">#AAbdbdbd</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorBlackWithTransparency">#64000000</color>
+    <color name="colorSecondaryWithTransparency">#AA00c853</color>
+    <color name="colorWhiteWithTransparency">#CCFFFFFF</color>
+    <color name="colorBlackWithHighTransparency">#07000000</color>
+    <color name="colorDivider">#1f000000</color>
+    <color name="colorOrange">#ff9800</color>
+    <color name="colorPurple">#8e24aa</color>
+    <color name="colorTranslucentBlack">#000000</color>
+    <color name="colorLime">#aeea00</color>
+    <color name="colorYellow">#ffff00</color>
+    <color name="colorAmber">#ffab00</color>
+    <color name="colorDarkOrange">#ff5722</color>
+    <color name="colorMessageBubbleGreen">#a4e97e</color>
+    <color name="colorPrimaryWithTransparency">#37464f00</color>
+    <color name="colorWhiteWithHighTransparency">#bbFaFFFF</color>
+    <color name="colorShowcaseMask">#dd101f27</color>
+
+    <color name="color_gradient_red_top">#FFf12711</color>
+    <color name="color_gradient_red_bottom">#FFf5af19</color>
+    <color name="color_gradient_orange_top">#FFff8008</color>
+    <color name="color_gradient_orange_bottom">#FFf2c94c</color>
+    <color name="color_gradient_yellow_top">#FFf8b500</color>
+    <color name="color_gradient_yellow_bottom">#FFfceabb</color>
+    <color name="color_gradient_light_green_top">#FF799f0c</color>
+    <color name="color_gradient_light_green_bottom">#FFdce35b</color>
+    <color name="color_gradient_dark_green_top">#FF1e9600</color>
+    <color name="color_gradient_dark_green_bottom">#FF6ef38c</color>
+
+</resources>

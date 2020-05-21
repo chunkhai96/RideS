@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vehicleContextMenuItems">
+        <item>Edit</item>
+        <item>Delete</item>
+    </string-array>
+
+    <string-array name="emergencyContactContextMenuItems">
+        <item>Edit</item>
+        <item>Delete</item>
+    </string-array>
+
+    <string-array name="identityMatrixContextMenuItems">
+        <item>Take Photo</item>
+        <item>Select From Gallery</item>
+    </string-array>
+
+    <string-array name="providedRideContextMenu">
+        <item>Cancel Ride</item>
+    </string-array>
+</resources>

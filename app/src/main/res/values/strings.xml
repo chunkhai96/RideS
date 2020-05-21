@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RideS</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="dialog_select_photo">SelectPhoto</string>
+
+    <string name="default_join_ride_note">Let me join you!</string>
+
+    <string-array name="profile_menu_texts">
+        <item>Vehicle</item>
+        <item>Rating &amp; Review</item>
+        <item>Setting</item>
+    </string-array>
+
+    <string name="default_view_profile_background_img_url">https://firebasestorage.googleapis.com/v0/b/rides-1538901438779.appspot.com/o/img_default_view_profile_background.jpg?alt=media&amp;token=b9f054cc-5871-47fb-a10b-393ef1326ef3</string>
+    <string name="title_activity_tutorial">Tutorial</string>
+
+</resources>

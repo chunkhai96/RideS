@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlCardHeader"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorDefaultText"
+                        android:id="@+id/tvMonth"/>
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvMonth"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="0dp"
+                        android:textAlignment="center"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="48dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_alignRight="@+id/rlCardHeader"
+                android:background="@color/colorDivider"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginLeft="11dp"
+                android:layout_alignLeft="@+id/rlCardDetail"
+                android:background="@color/colorDefaultText"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/rlCardHeader"
+                android:id="@+id/rlCardDetail">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_driving"
+                    android:tint="@color/colorWhiteWithTransparency"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/rlTime"
+                    android:visibility="gone"
+                    android:id="@+id/pic_driving"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_sitting"
+                    android:tint="@color/colorWhiteWithTransparency"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/rlTime"
+                    android:visibility="gone"
+                    android:id="@+id/pic_sitting"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:id="@id/rlCardDetail">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/rlStartingPoint">
+
+                            <ImageView
+                                android:id="@+id/ic_from"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_circle_outline"
+                                android:tint="@color/colorBlack"/>
+
+                            <TextView
+                                android:id="@+id/tvFromTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="0dp"
+                                android:layout_toRightOf="@id/ic_from"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="1"
+                                android:maxLines="2"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@color/colorDefaultText"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlStartingPoint"
+                            android:id="@+id/rlDestination">
+
+                            <ImageView
+                                android:id="@+id/ic_to"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_map_marker"
+                                android:tint="@color/colorBlack"/>
+
+                            <TextView
+                                android:id="@+id/tvToTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/ic_to"
+                                android:textColor="@color/colorDefaultText"
+                                android:textSize="16sp"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit ="1"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:scrollHorizontally="true" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="24dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="bottom"
+                            android:id="@+id/tvDay"/>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/rlTime">
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="bottom"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
